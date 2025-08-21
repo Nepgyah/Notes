@@ -1,3 +1,13 @@
+## Versioning
+Follow the SemVer style: `Major.Minor.Patch`
+### Major (0.x.x -> 1.x.x)
+Big changes, rewrites or major shifting for the project
+### Minor (0.0.x -> 0.1.x)
+New features, apps or any significant addition to the project that changes how you can use it
+### Patch (0.0.0 -> 0.0.1)
+Bug fixes, tweaks and small quality of life improvements
+### Micro (0.0.0.0 -> 0.0.0.1)
+Hotfixes or unplanned emergences fixes
 ## Branches
 ### Core
 - `trunk / dev / main` - contains the most up to date **stable** version of the repo
