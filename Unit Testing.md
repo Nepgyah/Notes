@@ -23,6 +23,31 @@ A unit test has 3 main parts
 - ASSERT: check if the right output was returned
 
 ## Frontend
+### Naming
+Tests names should be readable in plain english, like as you see in documentation.
+Example using Cypress:
+```
+describe("Login Page", () => {
+	it("shows an error for invalid characters", () => { ... });
+});
+```
+#### Cypress
+- it()
+	- Start with "should" as it makes the intent clear of the test
+ 	- The statement should explain **what is should do** not **how it does it**
+  	- Write in the present tense
+  	- Common actions
+  		- display
+  	 	- show
+  	  	- list
+  	  	- contain
+  	  	- allow
+  	  	- navigate
+  	  	- toggle
+  	  	- prevent
+  	  	- enable
+  	  	- disable
+This would read out as "**The login page shows an error for invalid characters"**
 ### Types
 Frontend unit testing typically is split into 2 major categories
 - **E2E** - test a instance of a user journey (i.e logging in, purchasing a item, etc)
