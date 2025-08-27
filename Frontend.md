@@ -105,3 +105,36 @@ A common way to name and organize classes is through BEM (Block, Element, Modife
         - "size_s", "disabled", "left-top"
     - Defined by single underscore
         - Ex: "logo_left-top", "search-form_disabled"
+### Accessibility
+#### ARIA (Accessible Rich Internet Applications)
+HTML attributes that define regions of a page. They let screen readers and other assistive technologies understand the structure of your page and provide navigational shortcuts
+Common landmarks (roles)
+- `banner`: The side wide header at the top
+- `navigation`: Primary navigation menu
+- `main`: The main content of the page, one per page
+- `search`: Search form or section
+- `complementary`: Side bar content
+- `contentinfo`: Footer with side wide content (copyright, contact, etc)
+- `region`: Generic label section of a page, requires a `aria-label` or `aria-labelled-by`. Some common sections that could require a label: "Contact, Pricing, FAQ"
+
+Prefer native html first as they automatically map to ARIA roles in modern browsers
+- `main`
+- `nav`
+- `header`
+- `footer`
+- `aside`
+
+If you have multiple of the same type, distinguish them via a `aria-label`
+```
+<nav aria-label="Main navigation">...</nav>
+<nav aria-label="Footer navigation">...</nav>
+```
+
+If links are simply images, such as a logo that acts as a home redirect. Add a label for the screen reader to compile
+```
+<a href="/" aria-label="Homepage">
+  <svg class="arcadia-logo" viewBox="0 0 2554 1348">
+    <use href="#arcadia-icon"></use>
+  </svg>
+</a>
+```
